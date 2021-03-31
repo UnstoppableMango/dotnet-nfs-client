@@ -6,6 +6,14 @@ namespace NfsClient
     {
         public const int Hashes = 1024;
         public const int IfNameSize = 16;
+        public const uint RpcContextMagic = 0xC6E46435;
+
+        public static readonly uint Salt = 0;
+
+        public RpcContext()
+        {
+            Magic = RpcContextMagic;
+        }
         
         public uint Magic { get; set; }
 
